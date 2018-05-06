@@ -1,15 +1,16 @@
 package com.sel.json;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ConvertString {
 	
 	
-	public static void main(String[] args) throws JsonProcessingException {
+	public static void main(String[] args) throws IOException {
 		
 		ObjectMapper objectMapper = new ObjectMapper();
 		User u=new User();
@@ -22,6 +23,9 @@ public class ConvertString {
 		
 		String jsonInString = objectMapper.writeValueAsString(u);
 		System.out.println(jsonInString);
+		objectMapper.writeValue(new File("G:\\user.json"), u);
+		
+		System.out.println("JSON SUCCESSFULLY CREATED");
 	}
 
 }
