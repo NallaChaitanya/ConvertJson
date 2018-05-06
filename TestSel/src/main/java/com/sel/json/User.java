@@ -6,6 +6,7 @@ public class User {
 
 	private String name;
 	private int age;
+	private Employee employee;
 	private List<String> messages;
 	public String getName() {
 		return name;
@@ -21,6 +22,12 @@ public class User {
 	}
 	public List<String> getMessages() {
 		return messages;
+	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 	public void setMessages(List<String> messages) {
 		this.messages = messages;
